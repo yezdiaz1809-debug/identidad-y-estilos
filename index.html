@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidad y Estilos - Confección y Uniformes</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <i class="fa-solid fa-scissors"></i>
+            <span>Identidad y Estilos</span>
+        </div>
+        <nav class="nav-menu">
+            <button class="nav-link-btn active" onclick="switchTab('inicio')">Inicio</button>
+            <button class="nav-link-btn" onclick="switchTab('catalogo')">Uniformes</button>
+            <button class="nav-link-btn" onclick="switchTab('servicios')">Arreglos</button>
+            <button class="nav-link-btn" onclick="switchTab('galeria')">Galería</button>
+            <button class="nav-link-btn" onclick="switchTab('precios')">Precios</button>
+            <button class="nav-link-btn" onclick="switchTab('contacto')">Ubicación</button>
+        </nav>
+        <div class="nav-actions">
+            <button class="cart-btn" id="cart-toggle-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DE LAS PESTAÑAS (VIEWS) -->
+    <main class="main-container">
+
+        <!-- VISTA INICIO -->
+        <section id="view-inicio" class="view-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Confección, Uniformes y Estilo Profesional</h1>
+                    <p>Especialistas en la elaboración de uniformes de alta calidad y servicios de modistería general en Ibagué. Expandiendo nuestra excelencia más allá del barrio La Arboleda[cite: 2].</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="switchTab('catalogo')">Ver Catálogo</button>
+                        <button class="btn btn-secondary" onclick="switchTab('servicios')">Explorar Arreglos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container features-highlights">
+                <div class="feature-box">
+                    <i class="fa-solid fa-medal"></i>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Prendas confeccionadas con materiales duraderos y acabados profesionales.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h3>Cobertura en Ibagué</h3>
+                    <p>Llevamos nuestros productos y servicios a todos los sectores de la ciudad[cite: 2].</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fa-solid fa-wallet"></i>
+                    <h3>Pagos Seguros</h3>
+                    <p>Efectivo contra entrega y transferencias bancarias directas[cite: 2].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA CATÁLOGO DE UNIFORMES -->
+        <section id="view-catalogo" class="view-section">
+            <div class="container section">
+                <div class="section-title">
+                    <h2>Catálogo Completo de Uniformes</h2>
+                    <p>Gran variedad de prendas escolares, institucionales y corporativas.</p>
+                </div>
+                <div class="products-grid" id="uniforms-grid">
+                    <!-- Dinámico por JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA SERVICIOS DE ARREGLOS -->
+        <section id="view-servicios" class="view-section">
+            <div class="container section">
+                <div class="section-title">
+                    <h2>Servicios de Modistería y Arreglos</h2>
+                    <p>Ajustes precisos y personalizados para renovar y adaptar tus prendas[cite: 2].</p>
+                </div>
+                <div class="products-grid" id="services-grid">
+                    <!-- Dinámico por JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA GALERÍA -->
+        <section id="view-galeria" class="view-section">
+            <div class="container section">
+                <div class="section-title">
+                    <h2>Galería de Trabajos</h2>
+                    <p>Muestra de nuestra dedicación, costuras y confecciones entregadas.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&q=80&w=600" alt="Confección"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&q=80&w=600" alt="Taller"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&q=80&w=600" alt="Prendas"></div>
+                    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&q=80&w=600" alt="Modistería"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA PRECIOS -->
+        <section id="view-precios" class="view-section">
+            <div class="container section">
+                <div class="section-title">
+                    <h2>Lista General de Precios</h2>
+                    <p>Tarifas orientativas de nuestros productos y servicios de modistería[cite: 2].</p>
+                </div>
+                <div class="table-responsive">
+                    <table class="price-table">
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Artículo / Servicio</th>
+                                <th>Precio Estimado</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="price-table-body">
+                            <!-- Dinámico por JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA CONTACTO Y UBICACIÓN -->
+        <section id="view-contacto" class="view-section">
+            <div class="container section">
+                <div class="section-title">
+                    <h2>Ubicación y Canales de Contacto</h2>
+                    <p>Ven a visitarnos o contáctanos de inmediato[cite: 2].</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>Dirección:</strong> Barrio La Arboleda, Ibagué - Tolima[cite: 2]</p>
+                        <p><i class="fa-solid fa-phone"></i> <strong>Teléfono / WhatsApp:</strong> +57 300 123 4567</p>
+                        <p><i class="fa-solid fa-wallet"></i> <strong>Métodos de Pago:</strong> Efectivo y transferencias bancarias[cite: 2]</p>
+                        <p><i class="fa-solid fa-clock"></i> <strong>Horarios:</strong> Lunes a Sábado de 8:00 AM a 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CARRITO DRAWER -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-bag-shopping"></i> Tu Carrito de Pedidos</h3>
+            <button class="close-cart" id="close-cart-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <p class="empty-cart-msg">El carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">Proceder al Pedido</button>
+        </div>
+    </div>
+
+    <!-- MODAL DE CHECKOUT -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Finalizar Solicitud de Pedido</h3>
+                <button id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="order-form">
+                    <div class="form-group">
+                        <label>Nombre Completo:</label>
+                        <input type="text" id="client-name" required placeholder="Ej. Ana María Gómez">
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono de Contacto:</label>
+                        <input type="tel" id="client-phone" required placeholder="Ej. 3109876543">
+                    </div>
+                    <div class="form-group">
+                        <label>Método de Pago:</label>
+                        <select id="payment-method">
+                            <option value="Efectivo">Efectivo contra entrega[cite: 2]</option>
+                            <option value="Transferencia">Transferencia Bancaria[cite: 2]</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Dirección de Envío / Recogida:</label>
+                        <input type="text" id="client-address" required placeholder="Ej. Dirección o barrio en Ibagué">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Identidad y Estilos. Todos los derechos reservados. Desarrollado para la Institución Educativa Técnica Ciudad Luz[cite: 2].</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
